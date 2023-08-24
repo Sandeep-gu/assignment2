@@ -1,0 +1,21 @@
+.App { 
+  background-color: #ff6666;
+  }
+  .App h1 {
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+}
+.container1:first-child{
+    width:20% !important;
+}
+@media screen and (max-width: 768px) {
+  .App{
+    width:80%;
+    margin: auto;
+
+  }
+  
+  
+}
+
