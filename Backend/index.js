@@ -7,7 +7,11 @@ const storage = require("node-persist");
 const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 //initialize all the storage
-
+const removeAllItem = async ()=>{
+    await storage.init();
+    await storage.clear();
+}
+removeAllItem().then(()=>{
 app.post("/data", jsonParser, async (req, res) => {
 	const { student_id, student_name } = req.body;
 	try {
@@ -33,4 +37,9 @@ app.get("/data", async (req, res) => {
 
 app.listen(3000, () => {
 	console.log("listening on port 3000");
+    
 });
+
+}).catch((error) => {
+    console.error('Error initializing storage:', error);
+  });

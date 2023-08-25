@@ -14,7 +14,7 @@ function App() {
 			.then((d) => setData(d));
 	};
 	console.log(data);
-	//when applicatino is render they automatically fetch data without calling
+	//when application is render they automatically fetch data without calling
 	useEffect(() => {
 		fetchData();
 	}, []);
@@ -42,24 +42,18 @@ function App() {
 	return (
 		<div className="container mt-4 App p-5 rounded">
 			<h1 className="text-center">TODO List App</h1>
-			<div className="container1 d-flex gap-1 flex-column flex-md-row m-4">
-				<label className="form-control bg-success align-self-stretch bg-success">
-					Enter The Task
-				</label>
-				<input
-					type="text"
-					className="form-control"
-					value={student_name}
-					onChange={(e) => setStudent_name(e.target.value)}
-				/>
-				<button
-					className="bg bg-primary form-control w-25"
-					onClick={handleSubmit}
-				>
-					Add
-				</button>
-			</div>
-			<div className="container">
+			<div className="row mt-5">
+        <label className="col-md-2 rounded text-center pt-2 bg-secondary">
+          Enter The Task
+        </label>
+        <input className="col-md form-control" value={student_name} onChange={(e)=>setStudent_name(e.target.value)}/>
+          
+        
+        <button className="col-md-2 rounded text-center bg-primary" onClick={handleSubmit}>Add Task</button>
+        
+       
+      </div>
+			<div className="container mt-5">
 				{data.map((item) => (
 					<div className="container bg-white form-control w-75 mb-3">
 						<h5 className="text-center">{item}</h5>

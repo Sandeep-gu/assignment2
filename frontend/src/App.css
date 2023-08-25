@@ -14,8 +14,9 @@
 	}
 }
 @media screen and (min-width: 768px) {
-	.container1 label:first-child {
+	.container1 label:first-child{
 		width: auto;
 		white-space: nowrap;
 	}
+  
 }
