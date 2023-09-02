@@ -1,0 +1,21 @@
+Backend:
+
+1.install mysql,express,nodemon
+2.import mysql,express
+3.connection between mysql and node.js
+4.create database name is 'notebook',
+5.create table in the database name is 'usecontent'.
+6.in the table we create two column id and name.
+7.for inserting data into the database from the frontend we have post method from express.
+8.for showing all data to the frontend we have use get method.
+9.for deleting data from the database when client send req then we use delete method.
+
+
+Frontend:
+
+1:install file of the react user interface through the vite react.
+2:install uuid for creating random id to store in the database with the data.
+3.create whole user interface that is mantion in the the assignment.
+4.fetch all data use of useeffect.
+5.we have a handlesubmit function, they take all the data from th form and post all the data.
+6.all be create delete function ,they take id those data want to deleted and delete it.
